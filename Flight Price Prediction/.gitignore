@@ -1,0 +1,6 @@
+data
+venv
+grid_search_rf.pkl
+best_model.pkl
+scaler.pkl
+rf_model.pkl
