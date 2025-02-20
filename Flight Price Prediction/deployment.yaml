@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flight-price-prediction-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: flight-price-prediction
+  template:
+    metadata:
+      labels:
+        app: flight-price-prediction
+    spec:
+      containers:
+      - name: flight-price-app
+        image: ishwar19/flight-price-app:v1  # Correct Docker Hub Image
+        ports:
+        - containerPort: 5000  # Matches Flask app's port
